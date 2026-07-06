@@ -1,9 +1,10 @@
 // ============================================================
-// BUNDLE.JS – Fully Optimized for Performance
-// Uses requestIdleCallback to defer non-critical JS
+// BUNDLE.JS – All JavaScript Combined & Optimized
 // ============================================================
 
-// Use requestIdleCallback to defer non-critical JS execution
+// ============================================================
+// 1. DEFER EXECUTION WITH requestIdleCallback
+// ============================================================
 if (window.requestIdleCallback) {
   window.requestIdleCallback(
     () => {
@@ -12,16 +13,23 @@ if (window.requestIdleCallback) {
     { timeout: 2000 },
   );
 } else {
+  // Fallback for older browsers
   document.addEventListener("DOMContentLoaded", initApp);
 }
 
+// ============================================================
+// 2. MAIN APPLICATION
+// ============================================================
 function initApp() {
-  // ---------- NAVBAR ----------
+  // ============================================================
+  // NAVBAR – Mobile toggle & Language dropdown
+  // ============================================================
   const mobileToggle = document.getElementById("mobileToggle");
   const navMenu = document.getElementById("navMenu");
   const langBtn = document.getElementById("langBtn");
   const langDropdown = document.getElementById("langDropdown");
 
+  // Mobile menu toggle
   if (mobileToggle && navMenu) {
     mobileToggle.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -31,6 +39,7 @@ function initApp() {
     });
   }
 
+  // Language dropdown toggle
   if (langBtn && langDropdown) {
     langBtn.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -38,6 +47,7 @@ function initApp() {
     });
   }
 
+  // Close dropdowns when clicking outside
   document.addEventListener("click", (e) => {
     if (langDropdown && langDropdown.classList.contains("open")) {
       if (!langBtn.contains(e.target) && !langDropdown.contains(e.target)) {
@@ -53,6 +63,7 @@ function initApp() {
     }
   });
 
+  // Close dropdowns with Escape key
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       if (langDropdown && langDropdown.classList.contains("open")) {
@@ -66,7 +77,9 @@ function initApp() {
     }
   });
 
-  // ---------- THEME ----------
+  // ============================================================
+  // THEME – Dark/Light mode toggle with localStorage
+  // ============================================================
   const themeToggle = document.getElementById("themeToggle");
   const icon = themeToggle?.querySelector("i");
   const body = document.body;
@@ -90,8 +103,9 @@ function initApp() {
     });
   }
 
-  // ---------- COUNTER (Animated Numbers) ----------
-  // Deferred by 500ms to let page paint first
+  // ============================================================
+  // COUNTERS – Animated statistics (scroll-triggered)
+  // ============================================================
   setTimeout(() => {
     const counters = document.querySelectorAll(".stat-number");
     if (counters.length > 0) {
@@ -100,10 +114,13 @@ function initApp() {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               const counter = entry.target;
+              // Prevent re-triggering
               if (counter.dataset.animated === "true") return;
               counter.dataset.animated = "true";
+
               const target = parseFloat(counter.getAttribute("data-target"));
               if (isNaN(target)) return;
+
               const duration = Math.min(2000, Math.max(800, target * 10));
               const startTime = performance.now();
               const isDecimal = target % 1 !== 0;
@@ -112,6 +129,7 @@ function initApp() {
               const animateCounter = (currentTime) => {
                 const elapsed = currentTime - startTime;
                 const progress = Math.min(elapsed / duration, 1);
+                // Ease-out cubic
                 const eased = 1 - Math.pow(1 - progress, 3);
                 const currentValue = target * eased;
                 counter.textContent = currentValue.toFixed(decimals);
@@ -132,8 +150,9 @@ function initApp() {
     }
   }, 500);
 
-  // ---------- SCROLL REVEAL (Deferred further) ----------
-  // Use requestIdleCallback to defer scroll reveal
+  // ============================================================
+  // SCROLL REVEAL – Fade-in animations (deferred)
+  // ============================================================
   if (window.requestIdleCallback) {
     window.requestIdleCallback(
       () => {
@@ -176,7 +195,9 @@ function initApp() {
     }
   }
 
-  // ---------- ACTIVE NAV LINK (Deferred) ----------
+  // ============================================================
+  // ACTIVE NAV LINK – Highlight current section (deferred)
+  // ============================================================
   if (window.requestIdleCallback) {
     window.requestIdleCallback(
       () => {
@@ -229,7 +250,9 @@ function initApp() {
     }
   }
 
-  // ---------- SMOOTH SCROLL ----------
+  // ============================================================
+  // SMOOTH SCROLL – With navbar offset + close mobile menu
+  // ============================================================
   const navbarHeight = document.getElementById("navbar")?.offsetHeight || 80;
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
@@ -243,6 +266,7 @@ function initApp() {
           window.pageYOffset -
           navbarHeight;
         window.scrollTo({ top: targetPosition, behavior: "smooth" });
+        // Close mobile menu if open
         if (navMenu?.classList.contains("open")) {
           navMenu.classList.remove("open");
           if (mobileToggle) {
@@ -254,7 +278,9 @@ function initApp() {
     });
   });
 
-  // ---------- FAQ ACCORDION (Optimized) ----------
+  // ============================================================
+  // FAQ ACCORDION – Smooth expand/collapse
+  // ============================================================
   const faqQuestions = document.querySelectorAll(".faq-question");
   faqQuestions.forEach((question) => {
     question.addEventListener("click", function () {
@@ -274,7 +300,9 @@ function initApp() {
     });
   });
 
-  // ---------- CONTACT FORM ----------
+  // ============================================================
+  // CONTACT FORM – Validation & feedback
+  // ============================================================
   const contactForm = document.getElementById("contactForm");
   if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
@@ -293,7 +321,9 @@ function initApp() {
     });
   }
 
-  // ---------- NEWSLETTER ----------
+  // ============================================================
+  // NEWSLETTER FORM – Simple subscription
+  // ============================================================
   const newsletterForm = document.getElementById("newsletterForm");
   if (newsletterForm) {
     newsletterForm.addEventListener("submit", function (e) {
@@ -307,4 +337,4 @@ function initApp() {
       }
     });
   }
-} // End of initApp
+} // End of initApp()
