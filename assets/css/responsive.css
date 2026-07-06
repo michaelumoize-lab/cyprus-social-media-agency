@@ -1,4 +1,3 @@
-/* Media queries */
 /* ============================================================
    RESPONSIVE BREAKPOINTS
    ============================================================ */
@@ -79,50 +78,146 @@
 
 /* ---- Mobile (max-width: 768px) ---- */
 @media (max-width: 768px) {
+  /* ===== NAVBAR ===== */
   .navbar-container {
     height: 70px;
+    padding: 0 1rem;
   }
 
+  /* ✅ FIX: Ensure mobile toggle is always visible on mobile */
+  .mobile-toggle {
+    display: flex !important;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+    position: relative;
+    z-index: 1001;
+  }
+
+  .mobile-toggle:hover {
+    background: rgba(0, 212, 255, 0.1);
+  }
+
+  /* ✅ FIX: Ensure the bars are visible and centered */
+  .mobile-toggle .bar {
+    display: block !important;
+    width: 26px;
+    height: 2.5px;
+    background: var(--color-text);
+    transition: all 0.3s ease;
+    border-radius: 2px;
+    flex-shrink: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .mobile-toggle .bar:nth-child(1) {
+    top: 14px;
+  }
+
+  .mobile-toggle .bar:nth-child(2) {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .mobile-toggle .bar:nth-child(3) {
+    bottom: 14px;
+  }
+
+  /* Animated hamburger */
+  .mobile-toggle.open .bar:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .mobile-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  .mobile-toggle.open .bar:nth-child(3) {
+    bottom: auto;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  /* Mobile menu panel */
   .nav-menu {
     position: fixed;
-    top: 70px;
+    top: 0;
     left: 0;
     width: 100%;
+    height: 100vh;
     background: var(--color-bg);
-    backdrop-filter: blur(12px);
-    padding: 1.5rem 2rem;
+    padding: 80px 2rem 2rem;
     box-shadow: 0 8px 30px var(--color-shadow);
-    border-bottom: 1px solid var(--color-border);
-    transform: translateY(-120%);
-    transition: transform var(--transition-medium);
+    transform: translateX(-100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 999;
+    overflow-y: auto;
+    visibility: hidden;
+  }
+
+  .nav-menu.open {
+    transform: translateX(0);
+    visibility: visible;
   }
 
   .dark-theme .nav-menu {
     background: var(--color-bg);
   }
 
-  .nav-menu.open {
-    transform: translateY(0);
-  }
-
   .nav-links {
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1.5rem;
     align-items: flex-start;
+    padding: 0;
   }
 
-  .mobile-toggle {
+  .nav-links a {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+    width: 100%;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  /* Nav actions on mobile - keep visible */
+  .nav-actions {
     display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-shrink: 0;
   }
 
+  .lang-btn {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  /* ===== HERO ===== */
   .hero {
     padding: 100px 0 60px;
     min-height: auto;
   }
 
   .hero h1 {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 
   .hero p {
@@ -132,21 +227,31 @@
   .hero-buttons {
     flex-direction: column;
     align-items: center;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
   }
 
   .hero-stats {
     flex-wrap: wrap;
     gap: 1.5rem;
+    justify-content: center;
   }
 
   .hero-image-wrapper {
     max-width: 280px;
   }
 
+  /* ===== SECTION HEADERS ===== */
   .section-header h2 {
     font-size: 2rem;
   }
 
+  /* ===== GRIDS ===== */
   .services-grid {
     grid-template-columns: 1fr;
   }
@@ -158,6 +263,7 @@
   .process-step {
     flex-direction: column;
     gap: 0.5rem;
+    align-items: flex-start;
   }
 
   .step-number {
@@ -181,6 +287,7 @@
     font-size: 2.2rem;
   }
 
+  /* ===== FOOTER ===== */
   .footer-grid {
     grid-template-columns: 1fr;
     text-align: center;
@@ -201,6 +308,18 @@
     flex-wrap: wrap;
   }
 
+  .newsletter-form {
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ===== CONTACT ===== */
   .contact-form {
     gap: 1rem;
   }
@@ -217,13 +336,76 @@
     padding: 0 1rem;
   }
 
+  /* ===== NAVBAR ===== */
+  .navbar-container {
+    height: 60px;
+    padding: 0 0.8rem;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+    gap: 0.3rem;
+  }
+
+  .logo svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* ✅ FIX: Smaller toggle on tiny screens */
+  .mobile-toggle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .mobile-toggle .bar {
+    width: 20px;
+    height: 2px;
+  }
+
+  .mobile-toggle .bar:nth-child(1) {
+    top: 12px;
+  }
+
+  .mobile-toggle .bar:nth-child(3) {
+    bottom: 12px;
+  }
+
+  .nav-menu {
+    padding: 70px 1.5rem 1.5rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    padding: 0.4rem 0;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    padding: 80px 0 40px;
+  }
+
   .hero h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .hero-badge {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .hero-badge i {
+    font-size: 0.7rem;
   }
 
   .hero-stats {
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 0.6rem;
+    align-items: center;
   }
 
   .hero-stat {
@@ -233,16 +415,257 @@
     justify-content: center;
   }
 
-  .section-header h2 {
-    font-size: 1.7rem;
+  .stat-number {
+    font-size: 1.6rem;
   }
 
+  .stat-label {
+    font-size: 0.8rem;
+  }
+
+  .hero-image-wrapper {
+    max-width: 200px;
+  }
+
+  .hero-content-icons {
+    font-size: 1.8rem;
+    gap: 0.8rem;
+  }
+
+  /* ===== BUTTONS ===== */
   .btn {
     padding: 0.6rem 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 260px;
+    justify-content: center;
+    font-size: 0.85rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  /* ===== SECTION HEADERS ===== */
+  .section-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .section-header p {
+    font-size: 0.95rem;
+  }
+
+  .section-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.8rem;
+  }
+
+  /* ===== SERVICE CARDS ===== */
+  .service-card {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .service-icon {
+    font-size: 2rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .service-card p {
     font-size: 0.9rem;
   }
 
+  /* ===== STATISTICS ===== */
   .stat-item .stat-number {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+  }
+
+  .stat-item .stat-label {
+    font-size: 0.8rem;
+  }
+
+  /* ===== TESTIMONIALS ===== */
+  .testimonial-card {
+    padding: 1.2rem 1rem;
+  }
+
+  .testimonial-card p {
+    font-size: 0.9rem;
+  }
+
+  .author-name {
+    font-size: 0.9rem;
+  }
+
+  .author-title {
+    font-size: 0.7rem;
+  }
+
+  /* ===== FAQ ===== */
+  .faq-question {
+    font-size: 0.95rem;
+    padding: 0.6rem 0;
+  }
+
+  .faq-answer p {
+    font-size: 0.9rem;
+  }
+
+  /* ===== CONTACT ===== */
+  .contact-item {
+    gap: 0.8rem;
+  }
+
+  .contact-icon {
+    font-size: 1.2rem;
+    min-width: 32px;
+  }
+
+  .contact-item h3 {
+    font-size: 0.9rem;
+  }
+
+  .contact-item a,
+  .contact-item p {
+    font-size: 0.85rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer-brand p {
+    font-size: 0.8rem;
+  }
+
+  .footer-links h3,
+  .footer-newsletter h3 {
+    font-size: 1rem;
+  }
+
+  .footer-links a {
+    font-size: 0.8rem;
+  }
+
+  .footer-newsletter p {
+    font-size: 0.8rem;
+  }
+
+  .newsletter-form input {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.7rem;
+  }
+
+  .footer-lang-links {
+    gap: 0.5rem;
+  }
+
+  .footer-lang-links a {
+    font-size: 0.7rem;
+  }
+
+  /* ===== CTA ===== */
+  section[style*="padding: 4rem 0"] {
+    padding: 3rem 0 !important;
+  }
+
+  section[style*="padding: 4rem 0"] h2 {
+    font-size: 1.8rem !important;
+  }
+
+  section[style*="padding: 4rem 0"] p {
+    font-size: 0.95rem !important;
+  }
+
+  section[style*="padding: 4rem 0"] .btn {
+    font-size: 0.9rem !important;
+    padding: 0.7rem 2rem !important;
+  }
+
+  /* ===== STATS SECTION CTA ===== */
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+}
+
+/* ---- Extra small phones (max-width: 360px) ---- */
+@media (max-width: 360px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    font-size: 0.75rem;
+    padding: 0.5rem 1.2rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .logo {
+    font-size: 0.95rem;
+  }
+
+  .logo svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .mobile-toggle {
+    width: 34px;
+    height: 34px;
+  }
+
+  .mobile-toggle .bar {
+    width: 18px;
+    height: 2px;
+  }
+
+  .mobile-toggle .bar:nth-child(1) {
+    top: 11px;
+  }
+
+  .mobile-toggle .bar:nth-child(3) {
+    bottom: 11px;
+  }
+
+  .nav-actions {
+    gap: 0.4rem;
+  }
+
+  .lang-btn {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .theme-toggle {
+    width: 30px;
+    height: 30px;
+    font-size: 0.85rem;
+  }
+
+  .hero-image-wrapper {
+    max-width: 160px;
+  }
+
+  .hero-content-icons {
+    font-size: 1.4rem;
+    gap: 0.6rem;
   }
 }
