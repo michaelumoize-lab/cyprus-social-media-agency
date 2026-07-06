@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Социальное медиа-агентство Кипр | Цифровой маркетинг и брендинг</title>
+    <meta name="description"
+        content="Ведущее социальное медиа-агентство на Кипре. Услуги цифрового маркетинга, брендинга, создания контента и управления социальными сетями. Развивайте свой бренд онлайн." />
+    <link rel="canonical" href="https://cyprussocialmedia.com/ru/" />
+    <link rel="alternate" hreflang="tr" href="https://cyprussocialmedia.com/" />
+    <link rel="alternate" hreflang="en" href="https://cyprussocialmedia.com/en/" />
+    <link rel="alternate" hreflang="ru" href="https://cyprussocialmedia.com/ru/" />
+    <link rel="alternate" hreflang="ar" href="https://cyprussocialmedia.com/ar/" />
+    <meta property="og:title" content="Социальное медиа-агентство Кипр | Цифровой маркетинг и брендинг" />
+    <meta property="og:description"
+        content="Ведущее социальное медиа-агентство на Кипре. Услуги цифрового маркетинга, брендинга, создания контента и управления социальными сетями." />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <!-- Preload critical fonts -->
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap"
+        as="style" />
+
+    <!-- Critical inlined CSS (above‑the‑fold) -->
+    <style>
+        /* Critical styles for initial render */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #ffffff;
+            color: #1a1a2e;
+            line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            font-size: 1.4rem;
+            text-decoration: none;
+            color: #0a1628;
+        }
+
+        .logo span {
+            color: #00d4ff;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+    </style>
+
+    <!-- Non‑critical CSS (loads asynchronously) -->
+    <link rel="stylesheet" href="../assets/css/variables.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="../assets/css/style.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" media="print" onload="this.media='all'" />
+    <noscript>
+        <link rel="stylesheet" href="../assets/css/variables.css" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/responsive.css" />
+    </noscript>
+
+    <!-- Font Awesome 6 (non‑blocking) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        media="print" onload="this.media='all'" />
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    </noscript>
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar" id="navbar" role="navigation" aria-label="Главная навигация">
+        <div class="container navbar-container">
+            <a href="/ru/" class="logo" aria-label="Социальное медиа-агентство Кипр">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="36" height="36" rx="10" stroke="#00d4ff" stroke-width="3" />
+                    <path d="M12 28V16L20 22L28 16V28" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <circle cx="20" cy="14" r="3" stroke="#00d4ff" stroke-width="2.5" />
+                    <path d="M28 28L32 32M12 28L8 32" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round" />
+                </svg>
+                <span>Соц<span>Агент</span></span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu" aria-label="Главное меню">
+                <ul class="nav-links">
+                    <li><a href="#hero" class="active">Главная</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#why-us">Почему мы</a></li>
+                    <li><a href="#process">Процесс</a></li>
+                    <li><a href="#portfolio">Портфолио</a></li>
+                    <li><a href="#testimonials">Отзывы</a></li>
+                    <li><a href="#faq">Вопросы</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="lang-switcher">
+                    <button class="lang-btn" id="langBtn" aria-label="Переключить язык">
+                        <i class="fas fa-globe"></i>
+                        <span>RU</span>
+                        <i class="fas fa-chevron-down"></i>
+                        <span class="sr-only">Переключить язык</span>
+                    </button>
+                    <ul class="lang-dropdown" id="langDropdown">
+                        <li><a href="/" hreflang="tr">Türkçe</a></li>
+                        <li><a href="/en/" hreflang="en">English</a></li>
+                        <li><a href="/ru/" hreflang="ru" class="active-lang">Русский</a></li>
+                        <li><a href="/ar/" hreflang="ar">العربية</a></li>
+                    </ul>
+                </div>
+
+                <button class="theme-toggle" id="themeToggle" aria-label="Переключить тёмную/светлую тему">
+                    <i class="fas fa-moon"></i>
+                    <span class="sr-only">Переключить тему</span>
+                </button>
+
+                <!-- Mobile toggle with hidden accessible label -->
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Открыть/закрыть мобильное меню"
+                    aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="sr-only">Меню</span>
+                    <span
+                        style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;">Открыть
+                        меню</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== HERO ===== -->
+        <section id="hero" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-sparkles"></i>
+                        <span>#1 Социальное медиа-агентство на Кипре</span>
+                    </div>
+                    <h1>Мы создаём <span>цифровые бренды</span>, которые доминируют</h1>
+                    <p>Стратегическое управление социальными сетями, создание контента и цифровой маркетинг,
+                        адаптированные для кипрского рынка. Мы превращаем подписчиков в лояльных клиентов.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i> Начать проект
+                        </a>
+                        <a href="#services" class="btn btn-outline">
+                            <i class="fas fa-play-circle"></i> Узнать услуги
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <span class="stat-number" data-target="150">0</span>
+                            <span class="stat-label">Довольных клиентов</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-number" data-target="500">0</span>
+                            <span class="stat-label">Проведённых кампаний</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-number" data-target="4.9">0</span>
+                            <span class="stat-label">Средний рейтинг</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image-wrapper">
+                        <div class="hero-image-placeholder">
+                            <div class="hero-orb"></div>
+                            <div class="hero-orb-secondary"></div>
+                            <div class="hero-content-icons">
+                                <i class="fab fa-instagram"></i>
+                                <i class="fab fa-facebook"></i>
+                                <i class="fab fa-tiktok"></i>
+                                <i class="fab fa-youtube"></i>
+                                <i class="fab fa-linkedin"></i>
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-wave">
+                <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 60C240 120 480 0 720 60C960 120 1200 0 1440 60V120H0V60Z" fill="url(#heroWave)" />
+                    <defs>
+                        <linearGradient id="heroWave" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.15" />
+                            <stop offset="50%" stop-color="#0a1628" stop-opacity="0.05" />
+                            <stop offset="100%" stop-color="#00d4ff" stop-opacity="0.15" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </section>
+
+        <!-- ===== ДОВЕРЕННЫЕ КОМПАНИИ ===== -->
+        <section id="trusted" class="trusted">
+            <div class="container">
+                <p class="trusted-label">Нам доверяют ведущие бренды по всему Кипру</p>
+                <div class="trusted-grid">
+                    <div class="trusted-item"><i class="fas fa-building"></i> <span>Кипрский банк</span></div>
+                    <div class="trusted-item"><i class="fas fa-hotel"></i> <span>Средиземноморские курорты</span></div>
+                    <div class="trusted-item"><i class="fas fa-ship"></i> <span>Oceanic Shipping</span></div>
+                    <div class="trusted-item"><i class="fas fa-gem"></i> <span>Кипрские ювелиры</span></div>
+                    <div class="trusted-item"><i class="fas fa-wine-bottle"></i> <span>Лимассольские вина</span></div>
+                    <div class="trusted-item"><i class="fas fa-plane"></i> <span>Кипрские авиалинии</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== О НАС ===== -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">О нас</span>
+                    <h2>Ваш партнёр в <span>цифровом росте</span></h2>
+                    <p>Мы — полносервисное социальное медиа-агентство на Кипре, помогающее бизнесу строить подлинные
+                        связи с аудиторией.</p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-image">
+                        <div class="about-image-placeholder">
+                            <i class="fas fa-people-arrows"></i>
+                            <span>Основано в 2020</span>
+                        </div>
+                    </div>
+                    <div class="about-content">
+                        <h3>Почему маркетинг в соцсетях важен</h3>
+                        <p>В современном цифровом мире 80% потребителей принимают решения о покупке на основе
+                            взаимодействия в социальных сетях. При уровне интернет-проникновения на Кипре более 90%,
+                            сильное цифровое присутствие становится обязательным для конкурентоспособности бизнеса. Мы
+                            даём именно это.</p>
+                        <ul class="about-features">
+                            <li><i class="fas fa-check-circle"></i> <span>Стратегии на основе данных – реальные
+                                    результаты</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span>Многоязычный контент (RU, EN, TR, AR) –
+                                    локальный и глобальный охват</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span>Полный цикл управления – от стратегии до
+                                    аналитики</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span>Прозрачная отчётность и инсайты в реальном
+                                    времени</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Узнать больше о нас</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== УСЛУГИ ===== -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Наши услуги</span>
+                    <h2>Что мы <span>предлагаем</span></h2>
+                    <p>Комплексные решения в социальных медиа, которые поднимут ваш бренд и обеспечат реальный рост
+                        бизнеса.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+                        <h3>Управление соцсетями</h3>
+                        <p>Профессиональное управление Instagram, Facebook, TikTok, LinkedIn и Twitter. Мы строим
+                            репутацию вашего бренда через контент-календари, ежедневное взаимодействие, стратегии
+                            роста и детальную аналитику.</p>
+                        <a href="#contact" class="service-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-pen-fancy"></i></div>
+                        <h3>Создание контента</h3>
+                        <p>Профессиональная фото- и видеосъёмка, рилсы, графический дизайн и креативный копирайтинг.
+                            Мы визуально рассказываем историю вашего бренда и создаём эмоциональную связь с
+                            аудиторией.</p>
+                        <a href="#contact" class="service-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Цифровая реклама</h3>
+                        <p>Таргетированные кампании в Meta Ads, TikTok Ads, Google Ads и LinkedIn Ads. Мы
+                            максимизируем ROI через стратегии, ориентированные на конверсии, достигая нужной
+                            аудитории на Кипре.</p>
+                        <a href="#contact" class="service-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-users"></i></div>
+                        <h3>Инфлюенс-маркетинг</h3>
+                        <p>Стратегические коллаборации с кипрскими и международными инфлюенсерами. Мы повышаем
+                            узнаваемость бренда через аутентичный контент и помогаем вам достичь новых сегментов
+                            аудитории.</p>
+                        <a href="#contact" class="service-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-search"></i></div>
+                        <h3>SEO и веб-присутствие</h3>
+                        <p>Мы оптимизируем ваш сайт и социальные профили для поисковых систем. Через исследование
+                            ключевых слов, техническое SEO и контент-стратегию мы обеспечиваем видимость бренда
+                            везде.</p>
+                        <a href="#contact" class="service-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-chart-pie"></i></div>
+                        <h3>Аналитика и отчёты</h3>
+                        <p>Детальные панели производительности, еженедельные и ежемесячные отчёты. Мы постоянно
+                            улучшаем стратегии на основе данных в реальном времени, показывая вам, где окупаются
+                            инвестиции.</p>
+                        <a href="#contact" class="service-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ПОЧЕМУ МЫ ===== -->
+        <section id="why-us" class="why-us">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Почему мы</span>
+                    <h2>Создано для <span>Кипра</span>, создано для <span>вас</span></h2>
+                    <p>Мы сочетаем глобальные лучшие практики с локальной экспертизой, чтобы приносить значимые
+                        результаты.</p>
+                </div>
+                <div class="why-grid">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="fas fa-map-pin"></i></div>
+                        <h3>Локальная экспертиза</h3>
+                        <p>Мы глубоко понимаем кипрский рынок, культуру и поведение потребителей. Наши стратегии
+                            основаны на локальной динамике и выделяют ваш бренд.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon"><i class="fas fa-language"></i></div>
+                        <h3>Многоязычный охват</h3>
+                        <p>Мы создаём контент на русском, английском, турецком и арабском, охватывая мультикультурный
+                            ландшафт Кипра и помогая вашему бренду достигать всех сообществ.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon"><i class="fas fa-clock"></i></div>
+                        <h3>Круглосуточная поддержка</h3>
+                        <p>Наша команда всегда готова ответить. Мы поддерживаем ваш бренд во всех часовых поясах,
+                            мгновенно реагируя, чтобы вы не упустили ни одной возможности.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon"><i class="fas fa-trophy"></i></div>
+                        <h3>Доказанный успех</h3>
+                        <p>Мы сопровождали более 150 предприятий на пути роста. Средний уровень удовлетворённости
+                            клиентов составляет 97%, и мы гордимся своими достижениями.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ПРОЦЕСС ===== -->
+        <section id="process" class="process">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Наш процесс</span>
+                    <h2>Как мы <span>работаем</span></h2>
+                    <p>Прозрачный и совместный подход, который ставит ваш бренд во главу угла.</p>
+                </div>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h3>Исследование и анализ</h3>
+                            <p>Мы погружаемся в ваш бренд, отрасль и целевую аудиторию. Анализируем текущее
+                                присутствие в соцсетях и определяем возможности для получения конкурентного
+                                преимущества.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h3>Разработка стратегии</h3>
+                            <p>Создаём индивидуальную стратегию социальных медиа, согласованную с вашими
+                                бизнес-целями, подкреплённую данными и рыночными инсайтами.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h3>Реализация и создание</h3>
+                            <p>Наша творческая команда создаёт качественный контент, активно управляет вашими
+                                каналами и запускает таргетированные рекламные кампании с высокой точностью.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h3>Оптимизация и рост</h3>
+                            <p>Мы отслеживаем производительность в реальном времени, постоянно улучшаем стратегии и
+                                отслеживаем ваш рост с помощью прозрачной отчётности.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ПОРТФОЛИО / КЕЙСЫ ===== -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Портфолио</span>
+                    <h2>Наши <span>работы</span></h2>
+                    <p>Истории успеха, которые приносят реальные бизнес-результаты.</p>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image"><i class="fas fa-store"></i></div>
+                            <div class="portfolio-info">
+                                <span class="portfolio-tag">E-commerce</span>
+                                <h3>Кипрский модный бренд</h3>
+                                <p><strong>Рост онлайн-продаж на 300%</strong> через кампании в Instagram и TikTok.
+                                    50 000+ новых подписчиков за 4 месяца.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image"><i class="fas fa-hotel"></i></div>
+                            <div class="portfolio-info">
+                                <span class="portfolio-tag">Гостиничный бизнес</span>
+                                <h3>Лимассольский пляжный курорт</h3>
+                                <p><strong>Увеличение бронирований на 80%</strong> через целевые кампании в
+                                    Facebook и с инфлюенсерами. 4.5x ROAS на рекламные расходы.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image"><i class="fas fa-utensils"></i></div>
+                            <div class="portfolio-info">
+                                <span class="portfolio-tag">Еда и напитки</span>
+                                <h3>Ресторанная группа в Никосии</h3>
+                                <p><strong>Рост трафика на 150%</strong> через Instagram и Google Ads. 200+ новых
+                                    регистраций клиентов за 3 месяца.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image"><i class="fas fa-graduation-cap"></i></div>
+                            <div class="portfolio-info">
+                                <span class="portfolio-tag">Образование</span>
+                                <h3>Кипрская языковая школа</h3>
+                                <p><strong>Увеличение числа студентов на 200%</strong> через многоязычные социальные
+                                    кампании. 320 квалифицированных лидов.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== СТАТИСТИКА ===== -->
+        <section id="statistics" class="statistics">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="150">0</span>
+                        <span class="stat-label">Обслужено клиентов</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="500">0</span>
+                        <span class="stat-label">Запущено кампаний</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="4.9">0</span>
+                        <span class="stat-label">Средний рейтинг</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="97">0</span>
+                        <span class="stat-label">Удержание клиентов %</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ПОСЛЕДНИЕ ИНСАЙТЫ (Превью блога) ===== -->
+        <section id="insights" class="services" style="background: var(--color-bg);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Инсайты</span>
+                    <h2>Последние <span>статьи блога</span></h2>
+                    <p>Свежие взгляды на социальные медиа, цифровой маркетинг и бизнес-ландшафт Кипра.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon" style="font-size: 2rem;"><i class="fas fa-robot"></i></div>
+                        <h3>Как ИИ меняет маркетинг в соцсетях</h3>
+                        <p>В 2026 году инструменты ИИ меняют маркетинговые стратегии — от создания контента до
+                            таргетинга. Откройте возможности для бизнеса на Кипре.</p>
+                        <a href="#" class="service-link">Читать далее <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon" style="font-size: 2rem;"><i class="fas fa-chart-simple"></i></div>
+                        <h3>10 советов по развитию бизнес-аккаунта в Instagram</h3>
+                        <p>Проверенные тактики для повышения вовлечённости, привлечения новых подписчиков и
+                            увеличения продаж. Включая рекомендации по рилсам, историям и контент-календарю.</p>
+                        <a href="#" class="service-link">Читать далее <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon" style="font-size: 2rem;"><i class="fas fa-building"></i></div>
+                        <h3>Почему каждому бизнесу на Кипре нужен цифровой маркетинг</h3>
+                        <p>В туризме, розничной торговле и услугах цифровое присутствие обязательно. Локальная
+                            динамика рынка и стратегии для опережения конкурентов.</p>
+                        <a href="#" class="service-link">Читать далее <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ОТЗЫВЫ ===== -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Отзывы</span>
+                    <h2>Что говорят <span>наши клиенты</span></h2>
+                    <p>Реальные отзывы от бизнесов, которым мы помогли расти.</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Наше присутствие в соцсетях полностью преобразилось. Вовлечённость выросла в разы за
+                            несколько месяцев, и мы увидели прямой эффект на прибыль. Действительно профессиональная
+                            команда."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MK</div>
+                            <div>
+                                <span class="author-name">Мария Константину</span>
+                                <span class="author-title">CEO, Кипрская модная группа</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Работа с агентством, которое так хорошо понимает кипрский рынок, изменила правила игры.
+                            Их стратегии одновременно креативны и основаны на данных. Результаты невероятные."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AP</div>
+                            <div>
+                                <span class="author-name">Андреас Пападопулос</span>
+                                <span class="author-title">Владелец, Лимассольский пляжный курорт</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Они не просто управляют соцсетями — они настоящие бизнес-партнёры. Они понимают наши цели,
+                            выстраивают стратегии соответственно и постоянно поддерживают связь."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">ED</div>
+                            <div>
+                                <span class="author-name">Елена Деметриу</span>
+                                <span class="author-title">Директор по маркетингу, Oceanic Shipping</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ВОПРОСЫ ===== -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Вопросы</span>
+                    <h2>Часто задаваемые <span>вопросы</span></h2>
+                    <p>Всё, что нужно знать о работе с нами.</p>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Какими соцсетями вы управляете?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Мы управляем всеми основными платформами: Instagram, Facebook, TikTok, LinkedIn,
+                                YouTube и Twitter. Мы адаптируем подход к каждой платформе в зависимости от вашей
+                                аудитории и целей.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Работаете ли вы с бизнесом за пределами Кипра?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Да, мы также работаем с международными клиентами. Наша команда имеет опыт проведения
+                                кампаний в Европе, на Ближнем Востоке и за их пределами. Мы предлагаем
+                                многоязычную поддержку и локализованные стратегии.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Сколько стоят ваши услуги?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Мы предлагаем гибкие пакеты, адаптированные под размер и цели вашего бизнеса. От
+                                ежемесячных планов управления до проектных кампаний — мы найдём решение под ваш
+                                бюджет. Свяжитесь с нами для бесплатной сметы.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Как вы измеряете успех?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Мы отслеживаем ключевые показатели: вовлечённость, охват, конверсии, ROI и настроения
+                                бренда. Мы предоставляем ежемесячные отчёты, которые наглядно показывают ваш
+                                прогресс.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Вы можете помочь с созданием контента?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Безусловно. У нас есть выделенная творческая команда, создающая качественные фото,
+                                видео, графику и тексты. Мы берём на себя всё — от разработки концепции до
+                                финального производства.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Как скоро мы увидим результаты?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Результаты зависят от ваших целей, но многие клиенты видят первые улучшения уже через
+                                4–6 недель. Мы сосредоточены на устойчивом долгосрочном росте с измеримыми вехами
+                                на пути.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA ===== -->
+        <section
+            style="padding: 4rem 0; background: linear-gradient(135deg, var(--color-secondary), var(--color-primary)); color: #fff; text-align: center;">
+            <div class="container">
+                <h2 style="font-size: 2.8rem; font-weight: 800; margin-bottom: 1rem;">Готовы развивать свой бизнес?</h2>
+                <p style="font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto 2rem;">Свяжитесь с нами для
+                    бесплатной консультации. Обсудим, как мы можем помочь вам.</p>
+                <a href="#contact" class="btn"
+                    style="background: #fff; color: var(--color-primary); padding: 0.9rem 3rem; border-radius: 50px; font-weight: 700; font-size: 1.1rem; box-shadow: 0 8px 30px rgba(0,0,0,0.2);">
+                    <i class="fas fa-calendar-check"></i> Получить консультацию
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== КОНТАКТЫ ===== -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Контакты</span>
+                    <h2>Давайте <span>поговорим</span></h2>
+                    <p>Готовы развивать свой бренд? Свяжитесь с нами сегодня.</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h3>Электронная почта</h3>
+                                <a href="mailto:hello@cyprussocialmedia.com">hello@cyprussocialmedia.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <h3>Телефон</h3>
+                                <a href="tel:+35725000000">+357 25 000 000</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h3>Адрес</h3>
+                                <p>Проспект Макариоса, 1, Никосия, Кипр</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <h3>Часы работы</h3>
+                                <p>Понедельник – Пятница: 09:00 – 18:00</p>
+                            </div>
+                        </div>
+                        <div class="contact-social">
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="contactName" class="sr-only">Ваше имя</label>
+                            <input type="text" id="contactName" placeholder="Ваше имя" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail" class="sr-only">Ваш Email</label>
+                            <input type="email" id="contactEmail" placeholder="Ваш Email" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="contactService" class="sr-only">Выберите услугу</label>
+                            <select id="contactService" required>
+                                <option value="">Выберите услугу</option>
+                                <option value="social">Управление соцсетями</option>
+                                <option value="content">Создание контента</option>
+                                <option value="ads">Цифровая реклама</option>
+                                <option value="influencer">Инфлюенс-маркетинг</option>
+                                <option value="seo">SEO и веб-присутствие</option>
+                                <option value="analytics">Аналитика и отчёты</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage" class="sr-only">Расскажите о вашем проекте</label>
+                            <textarea id="contactMessage" rows="5" placeholder="Расскажите о вашем проекте..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Отправить сообщение
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/ru/" class="logo">
+                        <svg width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="36" height="36" rx="10" stroke="#00d4ff" stroke-width="3" />
+                            <path d="M12 28V16L20 22L28 16V28" stroke="#00d4ff" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <circle cx="20" cy="14" r="3" stroke="#00d4ff" stroke-width="2.5" />
+                            <path d="M28 28L32 32M12 28L8 32" stroke="#00d4ff" stroke-width="2.5"
+                                stroke-linecap="round" />
+                        </svg>
+                        <span>Соц<span>Агент</span></span>
+                    </a>
+                    <p>Ведущее социальное медиа-агентство на Кипре, предоставляющее услуги цифрового маркетинга,
+                        брендинга и создания контента для роста вашего бизнеса.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="#hero">Главная</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#portfolio">Портфолио</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Услуги</h3>
+                    <ul>
+                        <li><a href="#services">Управление соцсетями</a></li>
+                        <li><a href="#services">Создание контента</a></li>
+                        <li><a href="#services">Цифровая реклама</a></li>
+                        <li><a href="#services">Инфлюенс-маркетинг</a></li>
+                        <li><a href="#services">SEO и веб-присутствие</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Будьте в курсе</h3>
+                    <p>Подпишитесь на нашу рассылку, чтобы получать советы по социальным медиа и инсайты.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Ваш Email" required />
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Социальное медиа-агентство Кипр. Все права защищены.</p>
+                <div class="footer-lang-links">
+                    <a href="/" hreflang="tr">Türkçe</a>
+                    <a href="/en/" hreflang="en">English</a>
+                    <a href="/ru/" hreflang="ru" class="active">Русский</a>
+                    <a href="/ar/" hreflang="ar">العربية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== COMBINED JAVASCRIPT (bundle.js) with defer ===== -->
+    <script src="../assets/js/bundle.js" defer></script>
+</body>
+
+</html>
